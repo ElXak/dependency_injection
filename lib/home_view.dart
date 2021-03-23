@@ -1,11 +1,11 @@
-import 'package:dependency_injection/inherited_injection.dart';
+import 'package:dependency_injection/get_it.dart';
 import 'package:flutter/material.dart';
 
 import 'app_info.dart';
 
 class HomeView extends StatelessWidget {
   // Home view has a dependency on the AppInfo
-  AppInfo appInfo;
+  final AppInfo appInfo;
 
   HomeView({Key key, this.appInfo}) : super(key: key);
 
@@ -48,8 +48,9 @@ class PostAction extends StatelessWidget {
 class LikeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // We have access to it anywhere
-    AppInfo appInfo = InheritedInjection.of(context).appInfo;
+    // We have access to it anywhere in the app with this simple call
+    // AppInfo appInfo = InheritedInjection.of(context).appInfo;
+    AppInfo appInfo = getIt<AppInfo>();
     return Container();
   }
 }

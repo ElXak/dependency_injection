@@ -4,7 +4,6 @@ import 'app_info.dart';
 
 class InheritedInjection extends InheritedWidget {
   final AppInfo _appInfo = AppInfo();
-  final Widget child;
 
   InheritedInjection({
     Key key,
