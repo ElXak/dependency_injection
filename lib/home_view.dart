@@ -1,5 +1,5 @@
-import 'package:dependency_injection/get_it.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'app_info.dart';
 
@@ -50,7 +50,7 @@ class LikeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     // We have access to it anywhere in the app with this simple call
     // AppInfo appInfo = InheritedInjection.of(context).appInfo;
-    AppInfo appInfo = getIt<AppInfo>();
+    AppInfo appInfo = Provider.of<AppInfo>(context);
     return Container();
   }
 }
