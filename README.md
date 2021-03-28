@@ -1,6 +1,7 @@
 # dependency_injection
 
 Dependency Injection for Beginners.
+InheritedWiget vs. get_it
 
 ## Getting Started
 
